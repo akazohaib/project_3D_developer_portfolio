@@ -7,13 +7,13 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import pixelVault from "../assets/pixelvault.mp4";
 
 const ProjectCard = ({
   index,
   name,
   description,
   tags,
-  image,
   source_code_link,
 }) => {
   return (
@@ -26,11 +26,14 @@ const ProjectCard = ({
         }}
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       >
-        <div className='relative w-full h-[230px]'>
-          <img
-            src={image}
-            alt='project_image'
+        <div className='relative w-full h-[540px]'>
+          <video
+            src={pixelVault} // Use the imported video file
             className='w-full h-full object-cover rounded-2xl'
+            autoPlay // Automatically plays the video
+            loop // Loops the video
+            muted // Mutes the video
+            controls={false} // Hides video controls for a clean look
           />
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
@@ -71,8 +74,8 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <p className={styles.sectionSubText}>My work</p>
+        <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
 
       <div className='w-full flex'>

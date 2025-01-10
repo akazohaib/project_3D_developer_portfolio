@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import Airport from '../assets/airport.mp4'
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
@@ -16,11 +16,11 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Adrian</span>
+            Hi, I'm <span className='text-[#915EFF]'>Saqib</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
+            I make 3D Product Visualization<br className='sm:block hidden' />
+            Videos & CGI
           </p>
         </div>
       </div>
@@ -44,6 +44,7 @@ const Hero = () => {
           </div>
         </a>
       </div>
+      
     </section>
   );
 };
